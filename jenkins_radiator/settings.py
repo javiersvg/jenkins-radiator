@@ -86,7 +86,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'jenkins_radiator.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     os.path.join(ROOT, 'templates'),
@@ -98,7 +98,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    'jenkins_radiator.radiator',
+    'radiator',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
 )
