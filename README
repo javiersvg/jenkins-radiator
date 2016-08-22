@@ -58,6 +58,15 @@ http://www.djangoproject.com/download/
 The project has no additional dependencies if running under Python
 2.6.
 
+== Jenkins Requirements ==
+
+Install the Parameterized Trigger plugin and make the main build pass
+its ${BUILD_NUMBER} as BUILD_NBR to any test job.
+Make the test job archive the report artifacts.
+Install the Description setter plugin and add to the job description
+an entry:
+results_page:"${BUILD_URL}path/to/report.html"
+if any. 
 
 == Local development ==
 
