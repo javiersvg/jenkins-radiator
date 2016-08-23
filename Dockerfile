@@ -1,11 +1,13 @@
 FROM python:2-alpine
 
 RUN apk update && \
-    apk update
+    apk update && \
+    apk add gcc && \
+    apk add musl-dev
 
-COPY jenkins_radiator/ app/
+COPY jenkins_radiator/ jenkins_radiator/
 
-WORKDIR app/
+WORKDIR jenkins_radiator/
 
 RUN pip install -r requirements.txt
 
